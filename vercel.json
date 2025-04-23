@@ -4,21 +4,16 @@
       {
         "src": "portfolio/wsgi.py",
         "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+      },
+      {
+        "src": "build_files.sh",
+        "use": "@vercel/static-build",
         "config": {
-          "maxLambdaSize": "15mb",
-          "runtime": "python3.9"
+          "distDir": "staticfiles_build"
         }
       }
     ],
-    "build": {
-      "env": {
-        "DJANGO_SETTINGS_MODULE": "portfolio.settings.production"
-      },
-      "commands": [
-        "pip install -r requirements.txt",
-        "python3.9 manage.py collectstatic --noinput"
-      ]
-    },
     "routes": [
       {
         "src": "/static/(.*)",
@@ -28,6 +23,6 @@
         "src": "/(.*)",
         "dest": "portfolio/wsgi.py"
       }
+      
     ]
   }
-  
