@@ -174,7 +174,7 @@ h4 {
 }
 
 .js {
-    width: 65%;
+    width: 70%;
     height: .5rem;
     background-color:red;
     margin: 1rem 0;
@@ -182,7 +182,7 @@ h4 {
 }
 
 .python {
-    width: 50%;
+    width: 85%;
     height: .5rem;
     background-color: #7952b3;
     margin: 1rem 0;
@@ -190,7 +190,7 @@ h4 {
 }
 
 .mysql {
-    width: 30%;
+    width: 80%;
     height: .5rem;
     background-color: #61dafb;
     margin: 1rem 0;
